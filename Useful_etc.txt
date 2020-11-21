@@ -1,0 +1,23 @@
+Database Host :10.112.45.71\SQL2016,781 
+OR
+
+
+plesk database: vN64g2!w
+
+plesk publish: mC\ye2SaOnZX
+
+
+Connection string at present-----------
+<add name="MGRConnection" connectionString="Data Source=5.10.109.52,781;Initial Catalog=ddub67_MGRConn;User ID=ddub67_Admin;Password=vN64g2!w" providerName="System.Data.SqlClient" />
+
+LocalSqlServer  data source=.\SQLEXPRESS;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|aspnetdb.mdf;User Instance=true
+========================================================
+
+data source=.\SQLEXPRESS;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|aspnetdb.mdf;User Instance=true
+Data Source=5.10.109.52,781;Initial Catalog=ddub67_MGRConnection;User ID=ddub67_me;Password=********;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False
+
+Server[@Name='ASPHOST86\SQL2016']/Database[@Name='ddub67_MGRConnection']/Table[@Name='AspNetUsers' and @Schema='dbo']/Data
+
+Data Source=5.10.109.52,781;Initial Catalog=ddub67_MGRConn;User ID=ddub67_Admin;Password=vN64g2!w
+
+c:\users\admin\appdata\local\microsoft\sql server management studio\18.0_isoshell\settings\sql server management studio

@@ -1,0 +1,134 @@
+﻿@model MGRescue_System.Models.LoginViewModel
+
+@{
+    ViewBag.Title = "Log in";
+    Layout = null;
+}
+
+
+<!doctype html>
+<html class="fixed">
+<head>
+
+    <!-- Basic -->
+    <meta charset="UTF-8">
+
+    <meta name="keywords" content="HTML5 Admin Template" />
+    <meta name="description" content="Porto Admin - Responsive HTML5 Template">
+    <meta name="author" content="okler.net">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link href="~/Content/Login/loginTheme.css?version=51" rel="stylesheet" />
+    @*<link href="~/Content/vendors/assests/login_theme.css" rel="stylesheet" />*@
+    <!-- Skin CSS -->
+    <link rel="stylesheet" href="~/Content/vendors/assests/default.css" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    @*@Styles.Render("~/Content/Dashboard/css")*@
+    <!-- Theme Custom CSS -->
+</head>
+<body>
+    <a href="/" class="logo pull-left">
+        <img src="~/images/logo/SVGLogo (2).png" height="54" alt="Rescue HR" />HOME
+    </a>
+    <!-- start: page -->
+    <section class="body-sign">
+        <div class="center-sign">
+
+            <div class="panel panel-sign">
+                <div class="panel-title-sign mt-xl text-right">
+                    <h2 class="title text-uppercase text-bold m-none"><i class="fa fa-user mr-xs"></i> Login</h2>
+                </div>
+                <div class="panel-body">
+                    <p style="padding-top:10px">Use a registered account to login</p><hr />
+                    <section id="loginForm">
+                        @*<form>*@
+                        @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                        {
+                            @Html.AntiForgeryToken()
+                            <h4 style="color:white">Use a registered account to log in.</h4>
+
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="form-group mb-none">
+                                <div class="row">
+                                    <div class="col-lg-10 mb-sm">
+                                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "Email" })
+                                    </div>
+                                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                                    <div class="col-lg-10 mb-sm">
+                                        @*<label>Surname</label>*@
+                                        @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Password" })
+                                    </div>
+                                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                                </div>
+
+
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <div class="checkbox-custom checkbox-default">
+                                        @Html.CheckBoxFor(m => m.RememberMe)
+                                        @Html.LabelFor(m => m.RememberMe, new { @class = "white-text" })
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 text-right">
+                                    @*<button type="submit" class="btn btn-primary hidden-xs">Sign Up</button>*@
+                                    <input type="submit" value="LOGIN" class="btn btn-primary hidden-xs" style="color: white; background-color: blue" />
+                                    @*<button type="submit" class="btn btn-primary btn-block btn-lg visible-xs mt-lg">Sign Up</button>*@
+                                </div>
+                            </div>
+
+                            <span class="mt-lg mb-lg line-thru text-center text-uppercase">
+                                <span>or</span>
+                            </span>
+
+                            @*<div class="mb-xs text-center">
+                                    @Html.Partial("_ExternalLoginsListPartial", new MGRescue_System.Models.ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
+                                    <a class="btn btn-facebook mb-md ml-xs mr-xs" >Connect with <i class="fa fa-facebook"></i></a>
+                                        <a class="btn btn-twitter mb-md ml-xs mr-xs">Connect with <i class="fa fa-twitter"></i></a>
+                                </div>*@
+
+                            <p>
+                                @Html.ActionLink("Register as a new user", "Register")
+                            </p>
+                            <p>
+                                @Html.ActionLink("Forgot your password?", "ForgotPassword")
+                            </p>
+                        }
+                        @*<div class="form-group mb-none">
+                                <label>Name</label>
+                                <input name="name" type="text" class="form-control input-lg" />
+                            </div>
+
+                            <div class="form-group mb-lg">
+                                <label>E-mail Address</label>
+                                <input name="email" type="email" class="form-control input-lg" />
+                            </div>*@
+
+                        @*</form>*@
+
+                    </section>
+                    @*<section id="socialLoginForm" style="margin-top: -40px;">
+                                @Html.Partial("_ExternalLoginsListPartial", new MGRescue_System.Models.ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
+                            </section>
+                        </div>*@
+                </div>
+
+                @*<p class="text-center text-muted mt-md mb-md">&copy; Copyright 2018. All rights reserved. RescueHR <a href="/Home/Index">d.dub</a>.</p>*@
+            </div>
+        </div>
+    </section>
+
+    <!-- end: page -->
+
+
+    @Scripts.Render("~/Scripts/Loginjs/js")
+
+</body>
+
+</html>

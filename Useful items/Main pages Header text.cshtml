@@ -1,0 +1,69 @@
+<header class="navbar navbar-inverse navbar-fixed-top " role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="/Home/Index"><h1><span class="fa fa-home bounce-in"></span>MGRescue System</h1></a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    @*<li><a href="~/Home/About">About Us</a></li>*@
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/Home/Trustees">Trustees</a></li>
+                            <li><a href="~/Home/About">Staff</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">404</a></li>
+                            <li class="dropdown-submenu">
+                                <a href="#" class="test" tabindex="-1">New dropdown<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Choice 1</a></li>
+                                    <li><a href="#">Choice 2</a></li>
+                                    <li><a href="#">Choice 3</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Registration</a></li>
+                            <li><a class="#">Body peircing</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Adoption</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Adoption Information</a></li>
+                            <li><a href="/Adoption/Cats">Cats</a></li>
+                            <li><a href="/Adoption/Dogs">Dogs</a></li>
+                            <li><a href="/Adoption/Rabbits">Rabbits</a></li>
+                            <li><a href="/Adoption/Smallies">Smallies</a></li>
+                            <li><a href="/UsersAdmin/Create">Create User</a></li>
+                            @if (Request.IsAuthenticated && User.IsInRole("Admin"))
+                            {
+                                <li><a href="/Animal/Index">Animal Database</a></li>
+                                <li><a href="/Animal/Upload">Add Animal Details</a></li>
+                            }
+                        </ul>
+                    </li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="~/Home/ContactUs">Contact</a></li>
+                    @if (Request.IsAuthenticated && User.IsInRole("Admin"))
+                    {
+                        <li class="dropdown active">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin Pages <i class="icon-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Roles", "Index", "RolesAdmin")</li>
+                                <li>@Html.ActionLink("Users", "Index", "UsersAdmin")</li>
+                                <li>@Html.ActionLink("Admin Dashboard", "Dashboard", "UsersAdmin")</li>
+                            </ul>
+                        </li>
+                    }
+
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </header><!--/header-->

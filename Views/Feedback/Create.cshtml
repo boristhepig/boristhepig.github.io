@@ -1,0 +1,313 @@
+﻿@model MGRescue_System.Models.FeedbackViewModel
+
+@{
+    ViewBag.Title = "Post Message";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Post Message | MGRescue System</title>
+    <link href="~/Content/Impact/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/Impact/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/Impact/pe-icons.css" rel="stylesheet" />
+    <link href="~/Content/Impact/prettyPhoto.css" rel="stylesheet" />
+    <link href="~/Content/Impact/animate.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <link href="~/Content/elegantstyle.css" rel="stylesheet" />
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <script src="~/Scripts/Impact/jquery.js"></script>
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon" sizes="144x144" href="~/images/ico/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="~/images/ico/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="~/images/ico/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" href="~/images/ico/apple-touch-icon-57x57.png">
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            'use strict';
+            setTimeout(function () {
+                $('body').addClass('loaded');
+            }, 3000);
+
+            $('body').backstretch([
+                "../images/bg/spiral.jpg",
+                "../images/bg/unsplash.jpg",
+                "../images/bg/broken.jpg"
+            ], { duration: 5000, fade: 500, centeredY: true });
+
+        });
+
+    </script>
+
+
+</head><!--/head-->
+<body onload="load();" onunload="GUnload()">
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+    <header class="navbar navbar-inverse navbar-fixed-top " role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="/Home/Index"><h1><span class="fa fa-home bounce-in"></span>THE ANIMAL HOME</h1></a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="~/Home/About">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                    @if (Request.IsAuthenticated && User.IsInRole("Admin"))
+                    {
+                        <li class="dropdown active">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin Pages <i class="icon-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Roles", "Index", "RolesAdmin")</li>
+                                <li>@Html.ActionLink("Users", "Index", "UsersAdmin")</li>
+                            </ul>
+                        </li>
+                    }
+                    @if (Request.IsAuthenticated && User.IsInRole("Admin"))
+                    {
+                        <li class="dropdown active">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin Pages <i class="icon-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Roles", "Index", "RolesAdmin")</li>
+                                <li>@Html.ActionLink("Users", "Index", "UsersAdmin")</li>
+                            </ul>
+                        </li>
+                    }
+
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </header><!--/header-->
+
+    <section id="single-page-slider" class="no-margin">
+        <div class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="center gap fade-down section-heading">
+                                    <h2 class="main-title">Post Messages</h2>
+                                    <hr>
+                                    <p>Of an or game gate west face shed. ﻿no great but music too old found arose.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--/.item-->
+            </div><!--/.carousel-inner-->
+        </div><!--/.carousel-->
+    </section><!--/#main-slider-->
+
+    <div id="content-wrapper">
+
+        <section id="contact" class="white">
+            <div class="container">
+                <div class="gap"></div>
+                @*<div class="row">*@
+                @*<div class="col-md-4 fade-up">
+                        <h3>Contact Information</h3>
+                        <p>
+                            <span class="icon icon-home"></span>Stretton, Burton-on-Trent<br />
+                            <span class="icon icon-phone"></span>+44 1283 569165<br />
+                            <span class="icon icon-mobile"></span>+44 79568 3424<br />
+                            <span class="fa fa-envelope"></span> <a href="mailto:david.dubois@mgar.org.uk">email@rspcaburton.org.uk</a> <br />
+                            <span class="fa fa-twitter"></span> <a href="https://twitter.com/rspcaburton">twitter</a> <br />
+                            <span class="fa fa-facebook"></span> <a href="https://www.facebook.com/RSPCABurtonUponTrent">facebook</a> <br />
+                        </p>
+                    </div>*@<!-- col -->
+            <div class="w3layouts_main wrap">
+                <h3>Please post any messages for colleagues here </h3>
+                @using (Html.BeginForm("Create", "Feedback", FormMethod.Post, new { @class = "agile_form" }))
+                {
+                    <h2>Please also make sure to add who the message is directed to!!!</h2>
+                    <ul class="agile_info_select">
+                        @for (int i = 0; i < Model.MessageTypes.Count; i++)
+                        {
+                            <li>
+                                @Html.RadioButtonFor(m => Model.Select, Model.MessageTypes[i].Type, new { @id = i })
+                                <label for="@i"> @Model.MessageTypes[i].Name</label>
+                                <div class="@Model.MessageTypes[i].Css"></div>
+                            </li>
+
+                        }
+                    </ul>
+                    <br />
+
+                    @Html.TextAreaFor(m => Model.Message, new { @class = "w3l_summary", @placeholder = "Message" })
+                    @Html.TextBoxFor(m => Model.To, new { @placeholder = "For the attention of" })
+                    @Html.TextBoxFor(m => Model.From, new { @placeholder = "Your Name" })
+                    @Html.TextBoxFor(m => Model.Email, new { @placeholder = "Your Email" })
+                    @Html.TextBoxFor(m => Model.PhoneNumber, new { @placeholder = "Your Phone number" })
+                    <input type="submit" value="send" class="agileinfo" />
+
+                    <div class=" container" style="background-color:black; opacity:0.8; text-align:center; color:white; position:center; padding:5px; margin-top:10px">
+                        @Html.ActionLink("Back to Dashboard", "Dashboard", "Home")
+                    </div>
+
+
+
+                }
+                <form action="#" method="post" class="agile_form"></form>
+
+            </div>
+                <a class="fa fa-forward" href="#">&nbsp;Dashboard</a>
+                @*<h3>Please post any messages for colleagues here </h3>*@
+                @*<div class="col-md-8 fade-up">
+                        @using (Html.BeginForm("Create", "Feedback", FormMethod.Post, new { @class = "agile_form" }))
+                        {
+                            <h2>Please also make sure to add who the message is directed to!!!</h2>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <ul class="agile_info_select">
+                                        @for (int i = 0; i < Model.MessageTypes.Count; i++)
+                                        {
+
+                                            <li>
+                                                @Html.RadioButtonFor(m => Model.Select, Model.MessageTypes[i].Type, new { @id = i })
+                                                <label for="@i"> @Model.MessageTypes[i].Name</label>
+                                                <div class="@Model.MessageTypes[i].Css"></div>
+                                            </li>
+                                        }
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <br />
+                            <div id="message"></div>
+                            <form method="post" action="#" id="contactform">
+
+                                @Html.TextAreaFor(m => Model.Message, new { @placeholder = "Message", @class = "w3l_summary" })
+                                @Html.TextBoxFor(m => Model.To, new { @placeholder = "For the attention of" })
+                                @Html.TextBoxFor(m => Model.From, new { @placeholder = "Your Name" })
+                                @Html.TextBoxFor(m => Model.Email, new { @placeholder = "Your Email" })
+                                @Html.TextBoxFor(m => Model.PhoneNumber, new { @placeholder = "Your Phone number" })
+
+
+                                <input type="submit" value="Send" class="btn btn-outlined btn-primary" />
+
+
+                            </form>
+                            <div class=" container" style="background-color:black; opacity:0.8; text-align:center; color:white; position:center; padding:5px; margin-top:10px">
+                                @Html.ActionLink("Back to Dashboard", "Dashboard", "Home")
+                            </div>
+
+                        }
+                    </div>*@<!-- col -->
+                @*</div>*@<!-- row -->
+                <div class="gap"></div>
+            </div>
+        </section>
+        <div id="mapwrapper">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13636.51898079024!2d-1.6133640761245975!3d52.82923464506404!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487a0292ee79c08d%3A0xe28895f7db675fee!2sHillfield+Animal+Home+-+RSPCA+Burton+Upon+Trent+%26+District+Branch!5e0!3m2!1sen!2sus!4v1562520364811!5m2!1sen!2sus" height="400" frameborder="0" style="border:0; width:100%" allowfullscreen></iframe>
+            @*<div id="map"></div>*@
+        </div>
+        <section class="white"></section>
+    </div>
+
+    <div id="footer-wrapper">
+        <section id="bottom" class="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 about-us-widget">
+                        <h4>Global Coverage</h4>
+                        <p>Was drawing natural fat respect husband. An as noisy an offer drawn blush place. These tried for way joy wrote witty. In mr began music weeks after at begin.</p>
+                    </div><!--/.col-md-3-->
+
+                    <div class="col-md-3 col-sm-6">
+                        <h4>Company</h4>
+                        <div>
+                            <ul class="arrow">
+                                <li><a href="#">Company Overview</a></li>
+                                <li><a href="#">Meet The Team</a></li>
+                                <li><a href="#">Our Awesome Partners</a></li>
+                                <li><a href="#">Our Services</a></li>
+                            </ul>
+                        </div>
+                    </div><!--/.col-md-3-->
+
+                    <div class="col-md-3 col-sm-6">
+                        <h4>Latest Articles</h4>
+                        <div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img class="widget-img" src="https://placehold.it/800x600" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <span class="media-heading"><a href="#">Blog Post A</a></span>
+                                    <small class="muted">Posted 14 April 2014</small>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img class="widget-img" src="https://placehold.it/800x600" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <span class="media-heading"><a href="#">Blog Post B</a></span>
+                                    <small class="muted">Posted 14 April 2014</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-3-->
+
+                    <div class="col-md-3 col-sm-6">
+                        <h4>Come See Us</h4>
+                        <address>
+                            <strong>Ace Towers</strong><br>
+                            New York Ave,<br>
+                            New York, 215648<br>
+                            <abbr title="Phone"><i class="fa fa-phone"></i></abbr> 546 840654 05
+                        </address>
+                    </div> <!--/.col-md-3-->
+                </div>
+            </div>
+        </section><!--/#bottom-->
+
+        <footer id="footer" class="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8">
+                        &copy; 2019 Your Site Name. All Rights Reserved. <a href="https://templatemag.com/bootstrap-templates/">Bootstrap templates</a> by TemplateMag.
+                    </div>
+                    <div class="col-sm-4">
+                        <ul class="pull-right">
+                            <li><a id="gototop" class="gototop" href="#"><i class="fa fa-chevron-up"></i></a></li><!--#gototop-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer><!--/#footer-->
+    </div>
+    <script src="~/Content/vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="~/Content/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="~/Scripts/Impact/plugins.js"></script>
+    <script src="~/Scripts/Impact/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWDPCiH080dNCTYC-uprmLOn2mt2BMSUk&amp;sensor=true"></script>
+    <script src="~/Scripts/Impact/init.js"></script>
+
+
+</body>
+</html>>

@@ -1,0 +1,445 @@
+﻿
+@{
+    ViewBag.Title = "About Us";
+    Layout = null;
+}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>About Us | MGRS</title>
+    <link href="~/Content/Impact/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/Content/Impact/pe-icons.css" rel="stylesheet">
+    <link href="~/Content/Impact/prettyPhoto.css" rel="stylesheet">
+    <link href="~/Content/Impact/animate.css" rel="stylesheet">
+    <link href="~/Content/HomePage/style.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <script src="~/Scripts/Impact/jquery.js"></script>
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/images/ico/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57x57.png">
+
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            'use strict';
+            setTimeout(function () {
+                $('body').addClass('loaded');
+            }, 2000);
+
+            jQuery('body').backstretch([
+                "../images/banner/cat.jpg",
+                "../images/banner/puppy.jpg",
+                "../images/banner/pexels-burst-374825.jpg",
+                "../images/banner/pexels-pixabay-208821.jpg"
+
+            ], { duration: 3000, fade: 500, centeredY: true });
+
+        });
+    </script>
+    <style>
+        .dropdown-menu {
+            background-color: blue;
+            opacity: 100;
+        }
+
+        .dropdown-submenu {
+            position: relative;
+        }
+
+            .dropdown-submenu .dropdown-menu {
+                top: 0;
+                left: 100%;
+                margin-top: -1px;
+                background-color: blue;
+            }
+    </style>
+</head><!--/head-->
+<body>
+    <!--<div id="preloader"></div>-->
+    <header class="navbar navbar-inverse navbar-fixed-top " role="banner">
+        @*<div id="search-wrapper">
+                <div class="container">
+                    <input id="search-box" placeholder="Search">
+                </div>
+            </div>
+            </div>*@
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="/Home/Index"><h1><span class="fa fa-home bounce-in"></span>MGRescue System</h1></a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="/Home/Index">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/Home/Trustees">Trustees</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">404</a></li>
+                            <li class="dropdown-submenu">
+                                <a href="#" class="test" tabindex="-1">New dropdown<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Choice 1</a></li>
+                                    <li><a href="#">Choice 2</a></li>
+                                    <li><a href="#">Choice 3</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Registration</a></li>
+                            <li><a class="#">Body peircing</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    @*<li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="career.html">Career</a></li>
+                                <li><a href="blog-item.html">Blog Single</a></li>
+                                <li><a href="pricing.html">Pricing</a></li>
+                                <li><a href="404.html">404</a></li>
+                                <li><a href="registration.html">Registration</a></li>
+                                <li class="divider"></li>
+                                <li><a href="privacy.html">Privacy Policy</a></li>
+                                <li><a href="terms.html">Terms of Use</a></li>
+                            </ul>
+                        </li>*@
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="~/Home/ContactUs">Contact</a></li>
+                    <li><span class="search-trigger"><i class="fa fa-search"></i></span></li>
+                </ul>
+            </div>
+        </div>
+    </header><!--/header-->
+
+    <section id="single-page-slider" class="no-margin" style="padding-bottom: 120px">
+        <div class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="center gap fade-down section-heading">
+                                    <h2 class="main-title">The Centres</h2>
+                                    <hr>
+                                    <p>Of an or game gate west face shed. ﻿no great but music too old found arose.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--/.item-->
+            </div><!--/.carousel-inner-->
+        </div><!--/.carousel-->
+    </section><!--/#main-slider-->
+
+    <div id="content-wrapper">
+        <section id="about-us" class="white">
+            <div class="container">
+                <div class="gap"></div>
+                <div class="row">
+                    <div class="col-md-12 fade-up">
+                        <p>
+
+                        </p>
+
+                        <p>
+                            Margaret Green, who founded our charity in 1965, was an amazing lady with incredible strength and determination. She passed away on Christmas Eve 2009, age 94. Despite being hospitalised for some weeks prior to her death, she still wouldn’t stop thinking of animals and even on the night before she died, she insisted on checking that arrangements had been made for her annual Christmas donation of carrots for Angel and all the other horses at our Church Knowle Centre.
+
+                            Nowadays our aims remain unchanged and we care for over 1,200 animals each year across three centres.
+
+                            Our Church Knowle Rehoming and Visitor Centre covers 35 acres of beautiful Purbeck countryside. It is home to cats, horses, donkeys, pigs, sheep, goats, rabbits, chickens, ducks and many more species. Church Knowle is also home to the charity’s head office which houses the finance, retail and fundraising teams.
+                        </p>
+                    </div>
+                    <div class="col-md-4 fade-up">
+
+                    </div>
+                </div>
+                <div class="gap"></div>
+                <div class="row fade-up">
+                    <div class="col-md-6">
+                        <div class="testimonial-list-item">
+                            <img class="pull-left img-responsive" src="~/images/team/helen copy.jpg" style: width="150" height="500">
+                            <blockquote>
+                                <p>
+                                    At Margaret Green Animal Rescue we take in pets that have become homeless due to a change in circumstances, or that have been neglected, mistreated or abandoned. Regardless of their circumstance, each pet will find a warm bed, a kind team and all the love and respect they deserve awaiting them at Margaret Green Animal Rescue.
+
+                                    We pride ourselves on the standard of care each rescue pet receives. As well as veterinary care, pets are prepared and rehabilitated ready for a new home. Most of our animals are vaccinated, micro chipped, treated against worms and fleas and neutered before going to their new home.
+
+                                    Finding forever homes is at the very heart of what we do and there is no better feeling than knowing we have found the perfect match. Our rehoming process is designed specifically to help potential owners adopt a pet that fits in perfectly with their lives and loved ones.
+
+                                    After adopting a pet from Margaret Green Animal Rescue you can be assured that you will always have our support. For advice and guidance, we will be right beside you whenever you need us through the adoption process and onwards as you settle into a life together.
+                                </p>
+                                <small>Manager at <cite title="Source Title">Company</cite></small>
+                            </blockquote>
+                        </div>
+                        @*<div class="testimonial-list-item">
+                                <img class="pull-left img-responsive quote-author-list" src="http://placehold.it/400x400">
+                                <blockquote>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                    <small>Manager at <cite title="Source Title">Company</cite></small>
+                                </blockquote>
+                            </div>*@
+                    </div>
+                    <div class="col-md-6">
+                        <div class="testimonial-list-item">
+                            <img class="img-responsive img-thumbnail bounce-in" src="~/images/team/c2ag_170x200_3_Margaret Green 1966.jpg">
+                            <blockquote>
+                                <p>
+                                    Margaret Green, who founded our charity in 1965, was an amazing lady with incredible strength and determination. She passed away on Christmas Eve 2009, age 94. Despite being hospitalised for some weeks prior to her death, she still wouldn’t stop thinking of animals and even on the night before she died, she insisted on checking that arrangements had been made for her annual Christmas donation of carrots for Angel and all the other horses at our Church Knowle Centre.
+
+                                    Nowadays our aims remain unchanged and we care for over 1,200 animals each year across three centres.
+
+                                    Our Church Knowle Rehoming and Visitor Centre covers 35 acres of beautiful Purbeck countryside. It is home to cats, horses, donkeys, pigs, sheep, goats, rabbits, chickens, ducks and many more species. Church Knowle is also home to the charity’s head office which houses the finance, retail and fundraising teams.
+                                </p>
+                                <small>Margaret <cite title="Source Title">Green</cite></small>
+                            </blockquote>
+                        </div>
+
+
+
+
+                        @*<div class="testimonial-list-item">
+                                <img class="pull-left img-responsive quote-author-list" src="http://placehold.it/400x400">
+                                <blockquote>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                    <small>Manager at <cite title="Source Title">Company</cite></small>
+                                </blockquote>
+                            </div>*@
+                    </div>
+                </div>
+
+                <div class="gap"></div>
+                <div class="center gap fade-down section-heading">
+                    <h2 class="main-title">Meet The Managers</h2>
+                    <hr>
+                    <p>Of an or game gate west face shed. ﻿no great but music too old found arose.</p>
+                </div>
+                <div class="gap"></div>
+
+                <div id="meet-the-team" class="row">
+                    <div class="col-md-3 col-xs-6">
+                        <div class="center team-member">
+                            <div class="team-image">
+                                <img class="img-responsive img-thumbnail bounce-in" src="~/images/team/Geoff.jpg" alt="">
+                                <div class="overlay">
+                                    <a class="preview btn btn-outlined btn-primary" href="~/images/team/Geoff.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+                                </div>
+                            </div>
+                            <div class="team-content fade-up">
+                                <h5>Geoff Wright<small class="role muted">CEO</small></h5>
+                                <p>From an animal welfare and retail background Geoff joined the team in 2015.</p>
+                                <a class="btn btn-social btn-facebook" href="#"><i class="fa fa-facebook"></i></a> <a class="btn btn-social btn-google-plus" href="#"><i class="fa fa-google-plus"></i></a> <a class="btn btn-social btn-twitter" href="#"><i class="fa fa-twitter"></i></a> <a class="btn btn-social btn-linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="center team-member">
+                            <div class="team-image">
+                                <img class="img-responsive img-thumbnail bounce-in" src="~/images/team/Kate web.jpg" alt="">
+                                <div class="overlay">
+                                    <a class="preview btn btn-outlined btn-primary" href="~/images/team/Kate web.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+                                </div>
+                            </div>
+                            <div class="team-content fade-up">
+                                <h5>Kate Wickins<small class="role muted">Animal Centre Manager Church Knowle</small></h5>
+                                <p>I was previously at other national rescues but after meeting the team at MGAR it was always going to mean a move to Dorset .</p>
+                                <a class="btn btn-social btn-facebook" href="#"><i class="fa fa-facebook"></i></a> <a class="btn btn-social btn-google-plus" href="#"><i class="fa fa-google-plus"></i></a> <a class="btn btn-social btn-twitter" href="#"><i class="fa fa-twitter"></i></a> <a class="btn btn-social btn-linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="center team-member">
+                            <div class="team-image">
+                                <img class="img-responsive img-thumbnail bounce-in" src="~/images/team/Helen Chittock.jpg" alt="">
+                                <div class="overlay">
+                                    <a class="preview btn btn-outlined btn-primary" href="~/images/team/Helen Chittock.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+                                </div>
+                            </div>
+                            <div class="team-content fade-up">
+                                <h5>Helen Ellesmore<small class="role muted">Animal Centre Manager Lincoln Farm</small></h5>
+                                <p>I have been at Margaret Green for around 12 years and really love working here.</p>
+                                <a class="btn btn-social btn-facebook" href="#"><i class="fa fa-facebook"></i></a> <a class="btn btn-social btn-google-plus" href="#"><i class="fa fa-google-plus"></i></a> <a class="btn btn-social btn-twitter" href="#"><i class="fa fa-twitter"></i></a> <a class="btn btn-social btn-linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="center team-member">
+                            <div class="team-image">
+                                <img class="img-responsive img-thumbnail bounce-in" src="~/images/team/Niki Ging.jpg" alt="">
+                                <div class="overlay">
+                                    <a class="preview btn btn-outlined btn-primary" href="~/images/team/Niki Ging.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+                                </div>
+                            </div>
+                            <div class="team-content fade-up">
+                                <h5>Nicki Ging<small class="role muted">Animal Centre Manager Wingletang</small></h5>
+                                <p>I built this place when Adam was still in nappies.</p>
+                                <a class="btn btn-social btn-facebook" href="#"><i class="fa fa-facebook"></i></a> <a class="btn btn-social btn-google-plus" href="#"><i class="fa fa-google-plus"></i></a> <a class="btn btn-social btn-twitter" href="#"><i class="fa fa-twitter"></i></a> <a class="btn btn-social btn-linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gap"></div>
+
+                <div id="meet-the-team" class="row">
+                    <div class="col-md-3 col-xs-6">
+                        <div class="center team-member">
+                            <div class="team-image">
+                                <img class="img-responsive img-thumbnail bounce-in" src="~/images/team/davedubois.jpg" alt="">
+                                <div class="overlay">
+                                    <a class="preview btn btn-outlined btn-primary" href="~/images/team/davedubois.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+                                </div>
+                            </div>
+                            <div class="team-content fade-up">
+                                <h5>Dave Dubois<small class="role muted">Estates Manager</small></h5>
+                                <p>Originally from a military background Dave went to university and from that forged a career in Animal Welfare.</p>
+                                <a class="btn btn-social btn-facebook" href="#"><i class="fa fa-facebook"></i></a> <a class="btn btn-social btn-google-plus" href="#"><i class="fa fa-google-plus"></i></a> <a class="btn btn-social btn-twitter" href="#"><i class="fa fa-twitter"></i></a> <a class="btn btn-social btn-linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-xs-6">
+                        <div class="center team-member">
+                            <div class="team-image">
+                                <img class="img-responsive img-thumbnail bounce-in" src="~/images/team/Karen.jpg" alt="">
+                                <div class="overlay">
+                                    <a class="preview btn btn-outlined btn-primary" href="~/images/team/Karen.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+                                </div>
+                            </div>
+                            <div class="team-content fade-up">
+                                <h5>Karen Pothacary<small class="role muted">Retail Manager</small></h5>
+                                <p>Karen has worked in the retail sector with many other charities until finally settling at Margaret Green.</p>
+                                <a class="btn btn-social btn-facebook" href="#"><i class="fa fa-facebook"></i></a> <a class="btn btn-social btn-google-plus" href="#"><i class="fa fa-google-plus"></i></a> <a class="btn btn-social btn-twitter" href="#"><i class="fa fa-twitter"></i></a> <a class="btn btn-social btn-linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="center team-member">
+                            <div class="team-image">
+                                <img class="img-responsive img-thumbnail bounce-in" src="~/images/team/team03.jpg" alt="">
+                                <div class="overlay">
+                                    <a class="preview btn btn-outlined btn-primary" href="~/images/team/team03.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+                                </div>
+                            </div>
+                            <div class="team-content fade-up">
+                                <h5>Julie Ford<small class="role muted">Admin Manager</small></h5>
+                                <p>Julie has been at Margaret Green for over 20 years and in that time she has overseen the admin department and accounts; a job she loves.</p>
+                                <a class="btn btn-social btn-facebook" href="#"><i class="fa fa-facebook"></i></a> <a class="btn btn-social btn-google-plus" href="#"><i class="fa fa-google-plus"></i></a> <a class="btn btn-social btn-twitter" href="#"><i class="fa fa-twitter"></i></a> <a class="btn btn-social btn-linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!--/#meet-the-team-->
+                <div class="gap"></div>
+                <div class="gap"></div>
+            </div>
+        </section>
+    </div>
+
+    <div id="footer-wrapper">
+        <section id="bottom" class="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 about-us-widget">
+                        <h4>Global Coverage</h4>
+                        <p>Was drawing natural fat respect husband. An as noisy an offer drawn blush place. These tried for way joy wrote witty. In mr began music weeks after at begin.</p>
+                    </div><!--/.col-md-3-->
+
+                    <div class="col-md-3 col-sm-6">
+                        <h4>Company</h4>
+                        <div>
+                            <ul class="arrow">
+                                <li><a href="#">Company Overview</a></li>
+                                <li><a href="#">Meet The Team</a></li>
+                                <li><a href="#">Our Awesome Partners</a></li>
+                                <li><a href="#">Our Services</a></li>
+                            </ul>
+                        </div>
+                    </div><!--/.col-md-3-->
+
+                    <div class="col-md-3 col-sm-6">
+                        <h4>Latest Articles</h4>
+                        <div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img class="widget-img" src="http://placehold.it/800x600" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <span class="media-heading"><a href="#">Blog Post A</a></span>
+                                    <small class="muted">Posted 14 April 2014</small>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img class="widget-img" src="http://placehold.it/800x600" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <span class="media-heading"><a href="#">Blog Post B</a></span>
+                                    <small class="muted">Posted 14 April 2014</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-3-->
+
+                    <div class="col-md-3 col-sm-6">
+                        <h4>Come See Us</h4>
+                        <address>
+                            <strong>Ace Towers</strong><br>
+                            New York Ave,<br>
+                            New York, 215648<br>
+                            <abbr title="Phone"><i class="fa fa-phone"></i></abbr> 546 840654 05
+                        </address>
+                    </div> <!--/.col-md-3-->
+                </div>
+            </div>
+        </section><!--/#bottom-->
+
+        <footer id="footer" class="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        &copy; 2019 <a target="_blank" href="http://www.distinctivethemes.com" title="Premium Themes and Templates">Distinctive Themes</a>. All Rights Reserved.
+                    </div>
+                    <div class="col-sm-6">
+                        <ul class="pull-right">
+                            <li><a id="gototop" class="gototop" href="#"><i class="fa fa-chevron-up"></i></a></li><!--#gototop-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer><!--/#footer-->
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('.dropdown-submenu a.test').on("click", function (e) {
+                $(this).next('ul').toggle();
+                e.stopPropagation();
+                e.preventDefault();
+            });
+        });
+    </script>
+
+    <script src="~/Scripts/Impact/bootstrap.min.js"></script>
+    <script src="~/Scripts/Impact/jquery.prettyPhoto.js"></script>
+    <script src="~/Scripts/Impact/plugins.js"></script>
+    <script src="~/Scripts/Impact/init.js"></script>
+</body>
+</html>

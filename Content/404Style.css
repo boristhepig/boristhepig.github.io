@@ -1,0 +1,48 @@
+﻿html,
+body {
+    height: 100%;
+}
+
+body {
+    background: #121118;
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/8533/starfield.svg);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.cat {
+    position: fixed;
+    bottom: -40px;
+    right: 15%;
+    width: 464px;
+    height: 599px;
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/8533/kitty_bro.svg);
+    transform: rotate(29deg);
+}
+
+canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2000;
+}
+
+h1 {
+    position: inherit;
+    padding-top: 150px;
+    padding-left: 150px;
+    text-shadow: inherit;
+    color: white;
+    font-size: 56px;
+}
+
+h2 {
+    position: inherit;
+    /*padding-top: 50px;*/
+    padding-left: 150px;
+    text-shadow: inherit;
+    color: white;
+    font-size: 36px;
+}

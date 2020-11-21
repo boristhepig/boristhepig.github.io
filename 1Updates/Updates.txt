@@ -1,0 +1,14 @@
+﻿Dated 06/10/20
+Dated 12/10/20 Got email working from contact page but lost control playing with register email.
+Dated 12/10/20 Got email for person registering account but need to get it to also email new register to admin
+dated 12/10/20 Email register, email confirmation and email contactpage are working.
+Dated 26/10/20 Email being sent now to Registered email and to Admin needed to change the sendgrid settings for click option
+Dated 06/11/20 Configured the Web.Debug.config file to hopefully redirect website to use the server 5.10.109.52,781 database instead of (LocalDb)\v11.0
+upDate 10/11/20 Not yet go the server configured to transform the web config file to the server database checking out these sites:
+https://docs.microsoft.com/en-us/previous-versions/dd465343(v=vs.100)?f1url=%3FappId%3DDev16IDEF1%26l%3DEN-US%26k%3Dk(WebApplicationProjects.DeploySQLWalkthrough);k(TargetFrameworkMoniker-.NETFramework,Version%253Dv4.7.2)%26rd%3Dtrue
+https://docs.microsoft.com/en-us/previous-versions/dd465318(v=vs.100)
+https://docs.microsoft.com/en-us/previous-versions/dd410115(v=vs.100)
+https://docs.microsoft.com/en-us/previous-versions/dd465326(v=vs.100)?redirectedfrom=MSDN
+
+Dated 10/11/20 Managed to get the calendar and messages forms working and saving correctly.
+Dated 13/11/20 Working currently on getting chat app to work from: https://github.com/AKouki/SignalR-Chat/blob/master/README.md

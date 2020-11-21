@@ -1,0 +1,69 @@
+namespace MGRescue_System.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class Animal : DbMigration
+    {
+        public override void Up()
+        {
+            CreateTable(
+                "dbo.Animals",
+                c => new
+                    {
+                        ID = c.Int(nullable: false, identity: true),
+                        Species = c.String(),
+                        Breed = c.String(),
+                        Name = c.String(),
+                        Years = c.Int(),
+                        Months = c.Int(),
+                        Sex = c.String(),
+                        Description = c.String(),
+                        ReferenceNumber = c.String(),
+                        ImagePath = c.String(),
+                    })
+                .PrimaryKey(t => t.ID);
+            
+        }
+        
+        public override void Down()
+        {
+            DropTable("dbo.Animals");
+        }
+    }
+}
+
+namespace MGRescue_System.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class Adoption : DbMigration
+    {
+        public override void Up()
+        {
+            CreateTable(
+                "dbo.Adoptions",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Species = c.String(),
+                        Breed = c.String(),
+                        Name = c.String(),
+                        Years = c.Int(),
+                        Months = c.Int(),
+                        Sex = c.String(),
+                        Description = c.String(),
+                        ReferenceNumber = c.String(),
+                        ImagePath = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+        }
+        
+        public override void Down()
+        {
+            DropTable("dbo.Adoptions");
+        }
+    }
+}

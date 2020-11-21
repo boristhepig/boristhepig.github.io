@@ -1,0 +1,186 @@
+namespace MGRescue_System.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class Animal : DbMigration
+    {
+        public override void Up()
+        {
+            CreateTable(
+                "dbo.Animals",
+                c => new
+                    {
+                        ID = c.Int(nullable: false, identity: true),
+                        Species = c.String(),
+                        Breed = c.String(),
+                        Name = c.String(),
+                        Years = c.Int(),
+                        Months = c.Int(),
+                        Sex = c.String(),
+                        Description = c.String(),
+                        ReferenceNumber = c.String(),
+                        ImagePath = c.String(),
+                    })
+                .PrimaryKey(t => t.ID);
+            
+        }
+        
+        public override void Down()
+        {
+            DropTable("dbo.Animals");
+        }
+    }
+}
+
+namespace MGRescue_System.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class Adoption : DbMigration
+    {
+        public override void Up()
+        {
+            CreateTable(
+                "dbo.Adoptions",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Species = c.String(),
+                        Breed = c.String(),
+                        Name = c.String(),
+                        Years = c.Int(),
+                        Months = c.Int(),
+                        Sex = c.String(),
+                        Description = c.String(),
+                        ReferenceNumber = c.String(),
+                        ImagePath = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+        }
+        
+        public override void Down()
+        {
+            DropTable("dbo.Adoptions");
+        }
+    }
+}
+
+namespace MGRescue_System.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class AnimalProfile : DbMigration
+    {
+        public override void Up()
+        {
+            CreateTable(
+                "dbo.AnimalProfiles",
+                c => new
+                    {
+                        ID = c.Int(nullable: false, identity: true),
+                        Reference_Number = c.Int(nullable: false),
+                        Name = c.String(),
+                        Species = c.String(),
+                        Breed = c.String(),
+                        Primary_Colour = c.String(),
+                        Secondary_Colour = c.String(),
+                        Tertiary_Colour = c.String(),
+                        Coat_Type = c.String(),
+                        Years = c.Int(),
+                        Months = c.Int(),
+                        Description = c.String(),
+                        Particular_Markings = c.String(),
+                        ImagePath = c.String(),
+                        Animal_Comments = c.String(),
+                        Operations = c.String(),
+                        Health_Problems = c.String(),
+                        Medications = c.String(),
+                        Bloodtested = c.String(),
+                        Blood_test_Date = c.DateTime(nullable: false),
+                        Animals_Vet = c.String(),
+                        Vet_Address = c.String(),
+                        Medical_Comments = c.String(),
+                        Microchipped = c.String(),
+                        ChipNumber = c.String(),
+                        Vaccinated = c.String(),
+                        Vac_Date = c.DateTime(nullable: false),
+                        Vac_Type = c.String(),
+                        Neutered = c.String(),
+                        Neutered_Date = c.DateTime(nullable: false),
+                        Flead = c.String(),
+                        Flead_Date = c.DateTime(nullable: false),
+                        Wormed = c.String(),
+                        Wormed_Date = c.DateTime(nullable: false),
+                        Special_Diet_Type = c.String(),
+                        Diet_Product = c.String(),
+                        Amount = c.String(),
+                        Diet_Frequency = c.String(),
+                        Diet_Frequency_Type = c.String(),
+                        Diet_Start = c.DateTime(nullable: false),
+                        Diet_End = c.DateTime(nullable: false),
+                        Diet_Comments = c.String(),
+                        Vac_Treatment = c.String(),
+                        Treatment_Date = c.DateTime(nullable: false),
+                        Next_Due = c.DateTime(nullable: false),
+                        Other_Treatment = c.String(),
+                        Treatment_Name = c.String(),
+                        Start_Treatment = c.DateTime(nullable: false),
+                        End_Treatment = c.DateTime(nullable: false),
+                        Dosage = c.String(),
+                        Dose_Frequency = c.String(),
+                        Dose_Frequecy_Type = c.String(),
+                        Specific_Info = c.String(),
+                        Person_Type = c.String(),
+                        Persons_FirstName = c.String(),
+                        Persons_Surname = c.String(),
+                        Persons_Address = c.String(),
+                        Persons_Phone_Number = c.String(),
+                        Reason_for_entry = c.String(),
+                        Entry_Date = c.DateTime(nullable: false),
+                        Other_Details = c.String(),
+                        Good_With_Dogs = c.String(),
+                        Experience_with_Dogs = c.String(),
+                        Good_With_Cats = c.String(),
+                        Experience_with_Cats = c.String(),
+                        Good_With_Smallies = c.String(),
+                        Experience_with_Smallies = c.String(),
+                        Good_With_Kids = c.String(),
+                        Experience_with_Kids = c.String(),
+                        Child_ages = c.String(),
+                        Good_with_Strangers = c.String(),
+                        Experience_with_Strangers = c.String(),
+                        Biting = c.String(),
+                        Bite_Details = c.String(),
+                        Possessive = c.String(),
+                        Possessive_Details = c.String(),
+                        Fear = c.String(),
+                        FearDetails = c.String(),
+                        Behaviour_at_Vets = c.String(),
+                        Animal_Demeanor = c.String(),
+                        Behaviour_at_Groomers = c.String(),
+                        Left_Alone = c.String(),
+                        Good_with_Food = c.String(),
+                        Good_being_Handled = c.String(),
+                        Commands = c.String(),
+                        Commands_Comments = c.String(),
+                        Behavioural_Comments = c.String(),
+                        Movement_Type = c.String(),
+                        Movement_Date = c.DateTime(nullable: false),
+                        Reserved_Date = c.DateTime(nullable: false),
+                        Reserve_Length = c.String(),
+                        Reserve_Length_Type = c.String(),
+                    })
+                .PrimaryKey(t => t.ID);
+            
+        }
+        
+        public override void Down()
+        {
+            DropTable("dbo.AnimalProfiles");
+        }
+    }
+}

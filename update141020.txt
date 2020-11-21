@@ -1,0 +1,32 @@
+namespace MGRescue_System.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class update141020 : DbMigration
+    {
+        public override void Up()
+        {
+            DropPrimaryKey("dbo.Animals");
+            AddColumn("dbo.Animals", "AnimalID", c => c.Guid(nullable: false));
+            AddColumn("dbo.Animals", "SpeciesIso3", c => c.String());
+            AddColumn("dbo.Animals", "BreedCode", c => c.String());
+            AddPrimaryKey("dbo.Animals", "AnimalID");
+            DropColumn("dbo.Animals", "ID");
+            DropColumn("dbo.Animals", "Species");
+            DropColumn("dbo.Animals", "Breed");
+        }
+        
+        public override void Down()
+        {
+            AddColumn("dbo.Animals", "Breed", c => c.String());
+            AddColumn("dbo.Animals", "Species", c => c.String());
+            AddColumn("dbo.Animals", "ID", c => c.Int(nullable: false, identity: true));
+            DropPrimaryKey("dbo.Animals");
+            DropColumn("dbo.Animals", "BreedCode");
+            DropColumn("dbo.Animals", "SpeciesIso3");
+            DropColumn("dbo.Animals", "AnimalID");
+            AddPrimaryKey("dbo.Animals", "ID");
+        }
+    }
+}

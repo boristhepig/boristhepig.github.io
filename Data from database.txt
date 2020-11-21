@@ -1,0 +1,26 @@
+Data from datatables:
+
+NETUSERS
+737c10ae-a0b2-4030-ae6d-015398661652	20 Brynmill Avenue,, BrynMill	Swansea	Wales	SA20BT	admin@example.com	False	AAOOQbXsdfAEpkbRaZTZDXoUBlTbLfD41N4256nM6eAwqNX0yd6ovfPj3VxQS2t9qg==	ad77d9e2-157c-4bc7-99e8-39479f9e56d0	01792 426959	False	False	NULL	False	0	admin@example.com
+c5a0b786-b49e-44dd-b124-3623974ed472	20 BrynMill Avenue	Swansea	Glamorgan	SA2 0BT	schisma2@hotmail.com	False	AE8+HHq2nrmm+BbxeLzPlsvdMSih/8wZAQmbQBn0DH89alIarWVxK2aJn4ebbnB6qw==	1cec3491-42a4-4ee3-b620-c69e5c57d939	NULL	False	False	NULL	True	0	schisma2@hotmail.com
+
+NET ROLES
+8ca64cf8-972b-4518-b0ee-aadf2881a060	Staff	Semi control	ApplicationRole
+cbf5c666-a471-4363-bddc-c1db52f0a188	Admin	Full Control	IdentityRole
+de44080e-8f7e-4fd5-81ed-d817d89bf15b	Administrator	Ultimate Control	ApplicationRole
+
+USER ROLES
+c5a0b786-b49e-44dd-b124-3623974ed472	8ca64cf8-972b-4518-b0ee-aadf2881a060
+737c10ae-a0b2-4030-ae6d-015398661652	cbf5c666-a471-4363-bddc-c1db52f0a188
+
+
+
+
+
+
+
+
+
+
+
+
